@@ -1,8 +1,19 @@
 <div class="grid grid-cols-3 gap-4">
     <div class="border-r-2 flex justify-center">
-        radio-input
+        <fieldset>
+            <legend>Select a background color</legend>
+            <div *ngFor="let element of radioElements; let inx = index">
+                <input type="radio" id={{inx}} name="background" value={{element.color}}
+                       [checked]="element.color == currentBackground"
+                       (change)="setBackground($event)">
+                <label for={{inx}}><span class="pr-10 font-bold leading-8" 
+                    [ngStyle] = "{color: element.color}" 
+                    > {{element.description}} </span></label>
+              </div>
+        </fieldset>    
     </div>
-    <div class="col-span-2">
+    <div class="col-span-2 flex justify-center items-center text-lg" 
+    [ngStyle]="{ backgroundColor: currentBackground }">
         background
     </div>    
 </div>
