@@ -1,0 +1,15 @@
+<div class="grid grid-cols-3 gap-4">
+    <div class="border-r-2 flex justify-center">
+        <ul>
+            <li class="leading-8" 
+             *ngFor="let option of frameworkList; let i = index" >
+                {{ i + 1 }}. - <span class="hover:font-bold hover:text-lg" (click)="showDescr(i)"
+                [class]="{ 'text-white':i==selectIndex }"
+                >{{ option.name }}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="col-span-2">
+        {{ description }}
+    </div>    
+</div>
