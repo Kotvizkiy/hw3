@@ -1,0 +1,14 @@
+<div class="grid grid-cols-3 gap-4">
+    <div class="flex flex-col justify-between gap-y-2">
+        <div>TitleCasePipe(uppercase):<br> {{ pipeString | uppercase }}</div>
+        <div>LowerCasePipe(lowercase):<br> {{ pipeString | lowercase }}</div>
+        <div>SlicePipe:<br> {{ pipeString | uppercase | slice:8:13 }}</div>
+    </div>
+    <div>DecimalPipe</div>
+    <div class="flex flex-col justify-between gap-y-2">
+        <div>PercentPipe: <br> {{ percent | percent:'3.1' }} </div>
+        <div>CurrencyPipe: <br> {{ amount | currency:'UAH':'symbol-narrow' }} </div>
+        <div>JSONPipe: <br> {{ framework | json }}</div>
+    </div>
+
+</div>
