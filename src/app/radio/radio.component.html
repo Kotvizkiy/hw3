@@ -6,13 +6,13 @@
                 <input type="radio" id={{inx}} name="background" value={{element.color}}
                        [checked]="element.color == currentBackground"
                        (change)="setBackground($event)">
-                <label for={{inx}}><span class="pr-10 font-bold leading-8" 
-                    [ngStyle] = "{color: element.color}" 
+                <label for={{inx}}><span class="pr-10 font-bold text-2xl leading-8" 
+                    [ngStyle] = "{color: element.color, '-webkit-text-stroke': '1px black'}"
                     > {{element.description}} </span></label>
               </div>
         </fieldset>    
     </div>
-    <div class="col-span-2 flex justify-center items-center text-lg" 
+    <div class="col-span-2 flex justify-center items-center text-4xl" 
     [ngStyle]="{ backgroundColor: currentBackground }">
         background
     </div>    

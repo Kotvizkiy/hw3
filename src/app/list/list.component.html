@@ -1,15 +1,17 @@
 <div class="grid grid-cols-3 gap-4">
-    <div class="border-r-2 flex justify-center">
+    <div class="border-r-2 flex">
         <ul>
             <li class="leading-8" 
              *ngFor="let option of frameworkList; let i = index" >
-                {{ i + 1 }}. - <span class="hover:font-bold hover:text-lg" (click)="showDescr(i)"
+                {{ i + 1 }}. - <span class="hover:font-bold hover:text-lg hover:cursor-pointer"
+                 (click)="showDescr(i)"
                 [class]="{ 'text-white':i==selectIndex }"
-                >{{ option.name }}</span>
+                >{{ option.name }}
+            </span>
             </li>
         </ul>
     </div>
-    <div class="col-span-2">
+    <div class="col-span-2 h-32 overflow-y-auto pr-5">
         {{ description }}
     </div>    
 </div>
